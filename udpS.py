@@ -8,6 +8,7 @@ PORT = 2222
 BUFSIZE = 1024
 ADDR = (HOST, PORT)
 udpSerSock = socket(AF_INET, SOCK_DGRAM)
+udpSerSock.bind(ADDR)
 while True:
 	data, addr = udpSerSock.recvfrom(BUFSIZE)
 	udpSerSock.sendto('[%s] %s' %(ctime(), data), addr)

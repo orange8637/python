@@ -10,7 +10,7 @@ udpCliSock = socket(AF_INET, SOCK_DGRAM)
 while 1:
 	data = raw_input('>> ')
 	udpCliSock.sendto(data, ADDR)
-	data, addr = udpCliSock.recvfrom(BUFSIZE)
+	data, ADDR = udpCliSock.recvfrom(BUFSIZE)
 	print data
 udpCliSock.close()
 

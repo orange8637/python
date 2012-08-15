@@ -12,5 +12,5 @@ udpSerSock.bind(ADDR)
 while True:
 	data, addr = udpSerSock.recvfrom(BUFSIZE)
 	udpSerSock.sendto('[%s] %s' %(ctime(), data), addr)
-	print 'sendto ...%s' %(addr)
+	print 'sendto ...',addr 
 udpSerSock.close()

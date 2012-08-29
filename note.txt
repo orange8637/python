@@ -1,0 +1,235 @@
+` " ```
+\' \" \n
+不分号
+逻辑一行=物理一行
+缩进决定块
+not and or + - * / % **（幂)
+if a == b：
+	do
+elif a < b:
+	do
+else:
+	do
+
+raw_input(" " )
+
+while 表达式a and b==2:
+	if c==1:
+		do
+	else:
+		do
+else:
+	do
+
+for i in range(0,5):
+	do
+else:
+	do
+
+array = ['abc', 123, 4.11]
+print array[1:2]
+
+break
+continue
+
+len(s)
+
+def say():
+	print "hello"
+def printMAX(a, b):
+	global a, b
+
+def printMAX(a,b=2,c=2)：默认行参只能后面
+关键参数（不根据位置定参数）
+def printMAX(10,c=3):
+def func():
+	return None
+	pass
+
+import sys
+
+for i in sys.argv:
+	print i
+pyc是二进制字节码文件
+模块import class
+dir(sys) 内建dir函数列出模块地定义的标识符
+
+列表array = ["abc", 123, "orange"]
+array.sort()
+for i in array:
+	print i
+len(array)
+array.append("cherry")
+del array[0]
+array.pop(index)
+array.remove(value)
+print '%4.4lf is %s\n' %(cost[0], shoplist[0])
+
+tuple元组不能被改变
+zoo = ("girl", "boy")
+ab = { "orange":91, "cherry":88}
+
+索引和切片构成序列
+print array[0:1]
+
+for name,score in ab.items():
+	print 'name: %s get score: %d' %(name,score)
+
+参考对象，直接赋值，是浅复制
+myarray = array
+myarry = array[:]#深复制
+
+import compileall
+compileall.compile_dir(".")
+
+import os
+os.system(command) == 0
+import time
+time.strftime('%Y%m%d%H%M%S')
+os.mkdir(string)
+os.path.exists(string)
+
+软件开发过程
+现在，我们已经走过了编写一个软件的各个环节。这些环节可以概括如下：
+什么（分析）
+如何（设计）
+编写（实施）
+测试（测试与调试）
+使用（实施或开发）
+维护（优化）
+join函数将列表变字符串
+src = ['/home/apple','/home/pineapple','orange']
+a = " ".join(src)
+a = " %s " %(' '.join(src))
+类属性：域和方法
+self
+
+class Person:
+	def say(self):
+		do
+
+p = Person()
+构造函数__init__
+class Person:
+	def __init__(self, name):
+		self.name = name
+p = Person("orange")
+	def __private私有，双下划线前缀
+
+__del__(self) 析构函数
+``` ```为__doc__()函数
+python 支持函数重载
+子类构造函数默认自动调用父类构造函数
+模块对象的类和变量
+
+# coding=utf-8
+
+python变量是没有类型的，变量是内存对象的引用。
+不可变的对象string, tuple, numbers
+dict, list是可变对象
+：实际上python没有像PHP那样的“引用传值”，而是“按值传递”，只是这“值”(对象)是可变的还是不可变的对象。
+
+c:
+#include<stdio.h>
+int main()
+{
+	freopen("data.in", "rb", stdin);
+	File *fin, *fout;
+	fin = fopen("data.in", "rb");
+	fout = fopen("data.out", "wb");
+	fscanf(fin, "%d", &x);
+	fprintf(fout, "%d", x);
+}
+c++:
+#include<fstream>
+using namespace std;
+int main()
+{
+	fstream fin;
+	fin.open("data.in", ios::in|ios::binary);
+}
+
+python:
+
+f = file("poem.txt", "w")
+f.write(string)
+f.close()
+
+f = file("poem.txt") # defaule "r"
+i = f.readline()
+while i:
+	print i
+	i = f.readline()
+
+python存储器，Pickle, cPickle,可以持久的存储对象并取出
+关键字 cPickle, cPickle.dump(var, f), cPickle.load(f)
+import cPickle as P
+afile = "data"
+alist = ["apple","orange"]
+f = file(afile, "w")
+P.dump(alist, f)
+f.close()
+f = file(afile)
+blist = P.load(f)
+print blist
+
+
+del(var)
+
+异常处理关键字try raise except,EOFError,KeyboardInterrupt
+class inputException(Exception):
+	'''my exception class'''
+	def __init__(self, length):
+		self.length = length
+try:
+	s = raw_input("input:")
+	l = len(s)
+	if(l < 3):
+		raise inputException(l)
+except EOFError:
+	print "Don't use <C-d>"
+except inputException, x:#类似c++的catch一个类型的对象传递参数
+	print "%d is too shortest" %(x.length)
+else:
+	print "Done"
+
+逐行读入文件
+f = file("poem.txt")
+l = f.readline()
+while l :
+	print l,
+	l = f.readline()
+
+import time
+time.sleep(seconds)
+
+t1 = time()
+t2 = time()
+print t2-t1
+
+
+入门：A byte of python
+http://sebug.net/paper/python/index.html
+官方文档: doc.python.org
+
+优雅遍历
+for i in array[::2] #2
+for i in array[::-1] #逆序
+for key, val in d.items() # dict对象
+array = [] #初始化列表
+d = {} #初始化字典
+
+当创建类是python的魔术方法：
+__eq__(self, other)      # 定义相等操作的行为, ==.
+__ne__(self, other)      # 定义不相等操作的行为, !=.
+__lt__(self, other)      #定义小于操作的行为, <.
+__gt__(self, other)      #定义不大于操作的行为, >.
+__le__(self, other)      #定义小于等于操作的行为, <=.
+__ge__(self, other)      #定义大于等于操作的行为, >=.
+
+其她容器：
+namedtuple()       # 用指定的域创建元组子类的工厂函数
+deque            # 类似list的容器，快速追加以及删除在序列的两端
+Counter          # 统计哈希表的dict子类
+OrderedDict            # 记录实体添加顺序的dict子类
+defaultdict            # 调用工厂方法为key提供缺省值的dict子类

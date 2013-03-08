@@ -4,7 +4,7 @@ from socket import *
 from time import ctime
 
 HOST = ''
-PORT = 21567
+PORT = 1023
 BUFSIZE = 1024
 ADDR = (HOST, PORT)
 tcpSerSock = socket(AF_INET, SOCK_STREAM)

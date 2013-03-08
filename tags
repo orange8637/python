@@ -1,0 +1,37 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADDR	tcpC.py	/^ADDR = (HOST, PORT)$/;"	v
+ADDR	tcpS.py	/^ADDR = (HOST, PORT)$/;"	v
+ADDR	udpC.py	/^ADDR = (HOST, PORT)$/;"	v
+ADDR	udpS.py	/^ADDR = (HOST, PORT)$/;"	v
+BUFSIZE	tcpC.py	/^BUFSIZE = 1024$/;"	v
+BUFSIZE	tcpS.py	/^BUFSIZE = 1024$/;"	v
+BUFSIZE	udpC.py	/^BUFSIZE = 1024$/;"	v
+BUFSIZE	udpS.py	/^BUFSIZE = 1024$/;"	v
+HOST	tcpC.py	/^HOST = '192.168.1.103'$/;"	v
+HOST	tcpS.py	/^HOST = ''$/;"	v
+HOST	udpC.py	/^HOST = '192.168.1.105'$/;"	v
+HOST	udpS.py	/^HOST = ''$/;"	v
+PORT	tcpC.py	/^PORT = 21567$/;"	v
+PORT	tcpS.py	/^PORT = 21567$/;"	v
+PORT	udpC.py	/^PORT = 2222$/;"	v
+PORT	udpS.py	/^PORT = 2222$/;"	v
+binary_search	demo.c	/^int binary_search(int *data, int low, int high, int value)$/;"	f
+ctime	tcpS.py	/^from time import ctime$/;"	i
+ctime	udpS.py	/^from time import ctime$/;"	i
+data	tcpC.py	/^	data = raw_input('>>> ')$/;"	v
+data	tcpC.py	/^	data = tcpCliSock.recv(BUFSIZE)$/;"	v
+data	tcpS.py	/^		data = tcpCliSock.recv(BUFSIZE)$/;"	v
+data	udpC.py	/^	data = raw_input('>> ')$/;"	v
+fib	demo.py	/^def fib(n):$/;"	f
+main	c_time.cpp	/^int main()$/;"	f
+main	demo.c	/^int main()$/;"	f
+sys	demo.py	/^import sys$/;"	i
+tcpCliSock	tcpC.py	/^tcpCliSock = socket(AF_INET, SOCK_STREAM)$/;"	v
+tcpSerSock	tcpS.py	/^tcpSerSock = socket(AF_INET, SOCK_STREAM)$/;"	v
+udpCliSock	udpC.py	/^udpCliSock = socket(AF_INET, SOCK_DGRAM)$/;"	v
+udpSerSock	udpS.py	/^udpSerSock = socket(AF_INET, SOCK_DGRAM)$/;"	v
